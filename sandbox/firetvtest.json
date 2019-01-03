@@ -1,0 +1,15 @@
+[
+  {
+    "id": "10",
+    "title": "Republic TV",
+    "description": "Republic TV",
+    "duration": "86",
+    "thumbURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Republic_TV.jpg/800px-Republic_TV.jpg",
+    "imgURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Republic_TV.jpg/800px-Republic_TV.jpg",
+    "videoURL": "http:\/\/playback.bcovlive.io\/cc6b1b1c03ba453f8b60d82cf4595ab5\/ap-southeast-1\/5384493731001\/playlist.m3u8?source=firetv&channel_id=1",
+    "categories": [
+      "Live TV"
+    ],
+    "channel_id": "1"
+  }
+]

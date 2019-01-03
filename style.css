@@ -1,0 +1,138 @@
+body{
+  /*font-family:verdana;*/
+  font-family: 'Myriad Pro','Lucida Grande','Segoe UI',Tahoma,Arial,sans-serif;
+  /*font-size:10pt;*/
+  font-size:11pt;
+  margin:10px;
+  background-color: #F0F0F0;
+}
+
+.container{
+  min-width:920px;
+  width:100%;
+  margin:0 auto;
+}
+
+a {
+  color: #FFFFFF;
+  text-decoration: none; 
+}
+
+a:hover{
+  color: #CC0000;
+  text-decoration:underline;
+}
+
+div .header{
+  margin-top: 55px;
+  height:223px;
+  text-align:left;
+  color: #CC0000;
+  /*background-color:#383838;*/
+  background-color:#FFFFFF;
+  background-image: url('./images/50.png');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  
+}
+
+div .header a{
+color: #CC0000;
+}
+
+div .header a hover{
+text-decoration: underline;
+}
+
+.header-info {
+	padding: 5px;
+}
+
+div .header h1{
+	font-size:24pt;
+	font-weight: normal;
+}
+
+div .header span{
+	font-size:12pt;
+}
+
+div .navigation{
+  min-width:920px;
+  width:100%;
+  
+  height:50px;
+  /*border-top:2px solid #FFFFFF;*/
+  border-bottom:2px solid #CCCCCC;
+  background-color: #FFFFFF;
+  text-align: center;
+  color: #000000;
+  font-size: 14pt;
+  
+  position: fixed;
+  top: 0px;
+  /*right: 5px;*/
+  
+}
+
+div .navigation a{
+  color: #000000;
+  font-size: 13pt;
+}
+
+
+div .body {
+}
+
+div .body a {
+  color: #cc0000;
+  text-decoration: none;
+}
+
+div .body a:hover {
+  color: #0000cc;
+}
+
+.bodypara-head{
+	font-size: 14pt;
+	/*font-weight: bold;*/
+	/*font-family: gothic;*/
+	/*text-decoration:underline;*/
+	height: 40px;
+	line-height: 40px;
+	
+}
+
+.bodypara-text {
+  text-align: justify;
+  color: #000000;
+  background-color: #FFFFFF;
+  padding: 5px;
+}
+
+.bodypara-text a {
+  color: #000000;
+  text-decoration:none;
+}
+
+.bodypara-text a:hover{
+  color: #CC0000;
+  text-decoration:underline;
+}
+
+div .footer{
+  border-top: 1px solid #000000;
+  top-margin:10px;
+  font-size:8pt; 
+  text-align:center;
+}
+
+.two-column-list {
+	columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
+li{
+    margin: 5px 0;
+}

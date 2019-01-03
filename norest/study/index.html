@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+	<meta name="description" content="NoReST: Human Subject Study">
+	<meta name="keywords" content="NoReST">
+	<meta name="author" content="Nirav Ajmeri">
+	<meta charset="UTF-8">
+    <title>Nirav Ajmeri -at- North Carolina State University</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="Shortcut Icon" type="image/x-icon" href="http://www.ncsu.edu/favicon.ico" />	
+  </head>
+  <body>
+    <div class="container" id="top">
+		
+		<hr style="background-color: #cc0000; height: 5px; border:0px"/>
+		
+		<div style="clear:both;"></div> <!-- This clears the two floats, thus giving "container" layout -->		
+		
+		<div class="header">
+			
+			<div class="header-info">
+				
+				<div>
+				  <h1>
+					NoReST: Human Subject Study
+				  </h1>
+				</div>
+			</div>
+        </div>
+		
+		
+		<div style="clear:both;"></div> <!-- This clears the two floats, thus giving "container" layout -->		
+		
+		<div class="body">
+			<div id="abstract">
+				<div class="bodypara-head"><b>Overview</b></div>
+				<div class="bodypara-text">
+				<p>
+				  We conducted a human subject study to evaluate the effectiveness of the refinement patterns in designing an STS. Our study was declared exempt by our university’s Institutional Review Board (IRB). We selected 32 graduate computer science students as study participants, and created two groups (Control and NoReST) balanced in terms of familiarity with conceptual modeling and software engineering industry experience. Each participant provided informed consent; upon completion, a participant received a payment of 20 USD. 
+				</p>
+
+<b> Study Mechanics and Deliverables </b>
+
+<p>
+We follow a one-factor two-alternatives design. Our study has three phases in which participants work as follows. 
+</p>
+
+<ul>
+<li> Phase 1: Learn. Learn and define the requirements and norm specification for a healthcare privacy scenario. </li>
+<li> Phase 2: Design. Define the requirements and norm specification for a healthcare security scenario.  </li>
+<li> Phase 3: Maintain. Comprehend and maintain the requirements and norm specification for an academic security access control scenario. </li>
+</ul>
+
+<p>
+In each phase, participants in the NoReST group are guided with refinement patterns, whereas participants in the Control group are given a basic definition of refinement. Participants record the completion times for each phase, and complete a post-study survey at the end of the study regarding the helpfulness of patterns in their design. The first two authors designed an oracle solution for each phase, and marked the participants' designs accordingly.
+</p>
+
+<b> Metrics </b>
+
+<ul>
+<li> Coverage of design: Fraction of norms in the oracle that are stated by the participants in each phase. Higher is better. </li>
+<li> Correctness of design: Fraction of participant-stated norms that occur in the oracle for each phase. Higher is better. </li>
+<li> Time to design: Time in minutes recorded by participants to complete each phase. Lower is better. </li>
+<li> Ease of design: Subjective ratings provided by the participants via the post-study survey on a Likert scale (1–5, where 1 corresponds to very hard, and 5 corresponds to very easy) for each phase. </li>
+</ul>
+
+<b> Hypotheses </b>
+
+<ul>
+<li> H1: NoReST produces specifications with greater coverage than Control. </li>
+<li> H2: NoReST produces specifications with greater correctness than Control. </li>
+<li> H3: NoReST produces specifications faster than Control. </li>
+<li> H4: NoReST helps produce specifications more easily than Control. </li> 
+</ul>
+
+<b> Results </b>
+
+<p>
+We analyze the specifications designed by the participants in the Control and NoReST groups, and conduct 2-tailed t test to compare the means.
+</p>
+
+<b> Observations </b>
+
+<ul>
+<li>
+H1 and H2 are rejected for the general subject population as there are no significant differences in coverage or accuracy between NoReST and Control. We perform further analysis by grouping the subjects by their prior experience in modeling and norms. H1 and H2 hold for participants with low experience in conceptual modeling or no prior knowledge of norms.
+</li>
+
+<li>
+H3 is rejected as there is no significant gain in time for the NoReST group. Further analysis suggests that for participants with no prior knowledge of norms, NoReST takes more time in the learning phase, but less time in designing and maintenance phases.
+</li>
+
+<li>
+H4 is rejected as perceived difficulty is found to be similar. However, participants in the pattern group strongly felt that patterns were helpful in their design (μ=4.4/5), and stated that an automated tool to generate alternative refinements would improve accuracy (μ=4.27/5). Moreover, both study groups employed a normative approach to capture requirements, and achieve good coverage and accuracy results (excluding minor errors regarding logic representation), which suggests that norms provide a promising way of capturing requirements. We did not employ an automated tool for NoReST, because we
+wanted to evaluate the usefulness of patterns without coupling
+</li>
+</ul>
+				
+				</div> <!-- bodypara-text ends here -->
+			</div> <!-- ends here -->
+			
+
+
+
+			<div id="paper">
+				<div class="bodypara-head"><b>Documents</b></div>
+				<div class="bodypara-text">
+					<ul>
+						<li><a href="./Pre-Participation_Survey.pdf">Pre-participation survey</a></li>
+						<li><a href="./../../norest-study/tutorial.pdf">Tutorial on Norms</a></li>
+						<li><a href="./../../norest-study/patterns_v2.pdf">Tutorial on Refinement Patterns</a></li>
+						<li><a href="./../../norest-study/scenario1_v2.pdf">Phase 1 Scenario</a></li>
+						<li><a href="./../../norest-study/scenario2_v2.pdf">Phase 2 Scenario</a></li>
+						<li><a href="./../../norest-study/scenario3_v2.pdf">Phase 3 Scenario</a></li>
+						<li><a href="./Post-Participation_Survey-NoReST.pdf">Post-participation survey for NoReST group</a></li>
+						<li><a href="./Post-Participation_Survey-Control.pdf">Post-participation survey for Control group</a></li>
+
+						<li><a href="./../../norest-study/approach-a">Study website for NoReST group</a></li>
+						<li><a href="./../../norest-study/approach-b">Study website for control group</a></li>
+						<li><a href="Analysis.pdf">Analysis</a></li>
+
+					</ul>
+				</div>
+			</div> <!-- paper ends here -->
+
+			
+		
+		</div> <!-- body ends here -->
+        <div class="footer"><hr/>Nirav Ajmeri. Last updated on March 15, 2016.</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Request JSON Test</title>
+  </head>
+  <body>
+    <a href="#" id="get-data">Get JSON data</a>
+    <div id="show-data"></div>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script>
+/*	
+	$.ajax({
+    url: "http://yangtze.csc.ncsu.edu:9090/csc555/services.jsp?action=getLogs&userId=1",
+ 
+    // The name of the callback parameter, as specified by the YQL service
+    jsonp: "callback",
+ 
+    // Tell jQuery we're expecting JSONP
+    dataType: "json",
+ 
+    // Tell YQL what we want and that we want JSON
+    data: {
+        q: "select * from logs",
+        format: "json"
+    },
+ 
+    // Work with the response
+    success: function( response ) {
+        console.log( response ); // server response
+    }
+});
+*/
+/*
+function jsonCallback(json){
+  //console.log(json);
+  alert(json);
+}
+
+$.ajax({
+  url: "http://yangtze.csc.ncsu.edu:9090/csc555/services.jsp?action=getLogs&userId=U",
+  dataType: "jsonp"
+});
+*/
+	
+	$.ajax({ url: 'http://yangtze.csc.ncsu.edu:9090/csc555/services.jsp?action=getLogs&userId=U', success: function(data) { alert(data); } });
+
+	
+	</script>
+  </body>
+</html>
