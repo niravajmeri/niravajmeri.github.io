@@ -2,7 +2,7 @@ body{
   /*font-family:verdana;*/
   font-family: 'Myriad Pro','Lucida Grande','Segoe UI',Tahoma,Arial,sans-serif;
   /*font-size:10pt;*/
-  font-size:11pt;
+  font-size:10pt;
   margin:10px;
   background-color: #F0F0F0;
 }
@@ -27,10 +27,10 @@ div .header{
   margin-top: 55px;
   height:223px;
   text-align:left;
-  color: #CC0000;
+  /*color: #CC0000;*/
   /*background-color:#383838;*/
   background-color:#FFFFFF;
-  background-image: url('./images/50.png');
+  /*background-image: url('./images/50.png');*/
   background-repeat: no-repeat;
   background-position: right 10px center;
   
@@ -54,7 +54,36 @@ div .header h1{
 }
 
 div .header span{
-	font-size:12pt;
+	font-size:10pt;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  /*padding: 10px;*/
+  height: 210px;  /*Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 17%;
+}
+
+.middle {
+  width: 50%;
+}
+
+.right {
+    width: 33%;
+    border-left: 2px dashed #CCCCCC;
+    padding-left: 10px;
+    font-size: 9pt;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 div .navigation{
