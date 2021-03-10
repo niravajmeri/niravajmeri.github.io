@@ -1,0 +1,18 @@
+<html>
+<div id="chartContainer">
+  <script src="https://d3js.org/d3.v5.js"></script>
+  <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
+  <script type="text/javascript">
+    var svg = dimple.newSvg("#chartContainer", 590, 400);
+    d3.tsv("/data/overview_2021-03-09.csv", function (data) {
+      var myChart = new dimple.chart(svg, data);
+      myChart.setBounds(60, 30, 510, 305)
+      var x = myChart.addCategoryAxis("x", "date");
+      // x.addOrderRule("Date");
+      myChart.addMeasureAxis("y", "transmissionRateMin");
+      myChart.addSeries(null, dimple.plot.bar);
+      myChart.draw();
+    });
+  </script>
+</div>
+</html>
