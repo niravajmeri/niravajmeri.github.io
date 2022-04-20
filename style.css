@@ -65,7 +65,7 @@ div .header span{
 }
 
 .left {
-  width: 17%;
+  width: 10%;
 }
 
 .middle {
@@ -73,10 +73,16 @@ div .header span{
 }
 
 .right {
-    width: 33%;
-    border-left: 2px dashed #CCCCCC;
+    width: 37%;
+    /*border-left: 2px dashed #CCCCCC;*/
     padding-left: 10px;
     font-size: 9pt;
+}
+
+.scrollable {
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #FFFFFF;
 }
 
 /* Clear floats after the columns */
