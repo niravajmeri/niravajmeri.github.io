@@ -174,7 +174,7 @@
 				</div> --> <!-- bodypara-text ends here -->
 			<!-- ></div> --> <!-- bio ends here -->
 			
-			<div id="publications">
+			<div id="publications-old">
 				<div class="bodypara-head">Publications</div>
 				<div class="bodypara-text">
 					<b><i>Publications from the University of Bristol</i></b>
@@ -384,7 +384,7 @@
 				</div>
 			</div> <!-- publications ends here-->
 			
-<h2 id="publications">Publications</h2>
+<div id="publications" class="bodypara-head">Publications</div>
 
 <input
   id="pub-search"
@@ -411,7 +411,7 @@
     {% if pub.code %}[{{ pub.code }}] {% endif %}
     {{ pub.authors }}.
     {% if pub.link %}
-      <a href="{{ pub.link }}">{{ pub.title }}</a>.
+      <a href="docs/{{ pub.link }}">{{ pub.title }}</a>.
     {% else %}
       {{ pub.title }}.
     {% endif %}
@@ -419,6 +419,9 @@
     {% if pub.doi %}
       doi: <a href="https://doi.org/{{ pub.doi }}">{{ pub.doi }}</a>.
     {% endif %}
+    {% if pub.note %}
+  		<span class="pub-note">{{ pub.note }}</span>
+	{% endif %}
   </li>
 {% endfor %}
 
