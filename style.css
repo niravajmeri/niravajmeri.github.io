@@ -200,7 +200,7 @@ li{
 }
 
 .pub-note {
-  display: inline-block;
-  color:#0000ff
+/*   display: inline-block; */
+  color: #0000ff;
   font-style: italic;
 }
