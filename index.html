@@ -382,6 +382,48 @@
 				</div>
 			</div> <!-- publications ends here-->
 			
+<h2 id="publications">Publications</h2>
+
+<input
+  id="pub-search"
+  type="search"
+  placeholder="Search publications"
+  aria-label="Search publications"
+  autocomplete="off"
+>
+
+{% assign current_year = nil %}
+
+{% for pub in site.data.publications %}
+  {% if pub.year != current_year %}
+    {% if current_year != nil %}
+      </ul>
+    {% endif %}
+
+    <h3 class="pub-year">{{ pub.year }}</h3>
+    <ul class="pub-list">
+    {% assign current_year = pub.year %}
+  {% endif %}
+
+  <li class="pub">
+    {% if pub.code %}[{{ pub.code }}] {% endif %}
+    {{ pub.authors }}.
+    {% if pub.link %}
+      <a href="{{ pub.link }}">{{ pub.title }}</a>.
+    {% else %}
+      {{ pub.title }}.
+    {% endif %}
+    {{ pub.venue }}{% if pub.location %}, {{ pub.location }}{% endif %}{% if pub.month %}, {{ pub.month }}{% endif %}, {{ pub.year }}.
+    {% if pub.doi %}
+      doi: <a href="https://doi.org/{{ pub.doi }}">{{ pub.doi }}</a>.
+    {% endif %}
+  </li>
+{% endfor %}
+
+{% if current_year != nil %}
+</ul>
+{% endif %}
+			
 			<div id="professional">
 				<div class="bodypara-head">Service</div>
 				<div class="bodypara-text">
@@ -458,5 +500,26 @@
 		</div> <!-- body ends here -->
         <div class="footer">Nirav Ajmeri.</div>
     </div>
+    
+<script>
+const search = document.getElementById('pub-search');
+
+search.addEventListener('input', () => {
+  const q = search.value.toLowerCase();
+
+  document.querySelectorAll('.pub').forEach(pub => {
+    pub.hidden = !pub.textContent.toLowerCase().includes(q);
+  });
+
+  document.querySelectorAll('.pub-list').forEach(list => {
+    const visible = [...list.querySelectorAll('.pub')]
+      .some(pub => !pub.hidden);
+
+    list.hidden = !visible;
+    list.previousElementSibling.hidden = !visible;
+  });
+});
+</script>
+    
   </body>
 </html>
