@@ -420,7 +420,11 @@
     {% else %}
       {{ pub.title }}.
     {% endif %}
-    {{ pub.venue }}{% if pub.location %}, {{ pub.location }}{% endif %}{% if pub.month %}, {{ pub.month }}{% endif %}, {{ pub.year }}.
+    {{ pub.venue }}
+    {% if pub.location %}, {{ pub.location }}{% endif %}
+    {% if pub.month %}, {{ pub.month }}{% endif %} 
+    {% if pub.year %}{{ pub.year }}, {% endif %}
+    {% if pub.pages %}pages {{ pub.pages }}. {% endif %}
     {% if pub.doi %}
       doi: <a href="https://doi.org/{{ pub.doi }}">{{ pub.doi }}</a>.
     {% endif %}
